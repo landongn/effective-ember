@@ -3,15 +3,15 @@ App.Router.map(function () {
   this.resource('treat', function () {
 
     // define an action on that model
-    this.route('start');
+    this.route('create');
 
     // You can embed resources in other resources
-    this.resource('flavor', function () {
+    this.resource('scoop', function () {
       this.route('choose', {path: 'index'}); //name, options as args
-      this.route('scoops');
-      this.route('toppings');
+      this.route('confirm');
       this.resource('topping', function () {
         this.route('add');
+        this.route('confirm');
       });
     });
 
