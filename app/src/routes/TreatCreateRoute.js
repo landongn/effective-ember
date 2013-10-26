@@ -4,7 +4,10 @@ App.TreatCreateRoute = Ember.Route.extend({
 			App.CurrentTreat = App.Treat.create();
 		}
 
-		console.log(App.CurrentTreat);
+		App.CurrentTreat.reopen({
+			flavors: App.Flavors
+		});
+
 		return App.CurrentTreat;
 	},
 	setupController: function (model, controller) {
@@ -12,9 +15,6 @@ App.TreatCreateRoute = Ember.Route.extend({
 	},
 
 	renderTemplate: function () {
-		this.render('menu/mainMenu', {
-			outlet: 'menu'
-		});
 
 		this.render('activities/treat/create', {
 			outlet: 'activity'
@@ -24,5 +24,13 @@ App.TreatCreateRoute = Ember.Route.extend({
 			into: 'menu/mainMenu',
 			outlet: 'subnav'
 		});
+	},
+	actions: {
+		addTopping: function (topping) {
+
+		},
+		addScoop: function (flavor) {
+
+		}
 	}
 });

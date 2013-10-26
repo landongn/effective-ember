@@ -7,12 +7,11 @@ App.Router.map(function () {
 
     // You can embed resources in other resources
     this.resource('scoop', function () {
-      this.route('choose', {path: 'index'}); //name, options as args
-      this.route('confirm');
-      this.resource('topping', function () {
-        this.route('add');
-        this.route('confirm');
-      });
+      this.route('add');
+    });
+
+    this.resource('topping', function () {
+      this.route('add');
     });
 
     this.route('finalize');

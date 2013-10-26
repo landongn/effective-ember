@@ -1,1 +1,15 @@
 <h1>create a new treat</h1>
+
+<h2>Start by adding a scoop of ice cream</h2>
+<ul class="block-grid">
+	{{#each flavors}}
+		<button {{action 'addScoop' this}} class="{{unbound this}} flavor">{{this}}</button>
+	{{/each}}
+</ul>
+
+
+<aside>
+	subtotal: {{subtotal}} <br />
+	cost per scoop: {{cost_per_scoop}} <br />
+	cost per topping: {{cost_per_topping}} <br />
+</aside>

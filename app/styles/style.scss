@@ -8,19 +8,21 @@
 @import "components/lib";
 
 .html, body {
-	background:#EBEADC;
-	color:#694120;
+	background:url('../images/mochaGrunge.png') repeat;
+	color:#FFFFFF;
 	font-family: 'Lato', sans-serif;
-	font-size: 16px;
+	font-weight:300;
+	font-size: 20px;
 }
 
 h1, h2, h3, h4, h5, h6, p, div, span, aside {
-	color:#694120;
+	color:#FFFFFF;
 	font-family: 'Lato', sans-serif;
+	font-weight:100;
+	font-size:20px;
 }
 
 nav {
-	@include box-shadow(0px 20px 0px 0px darken(#EBEADC, 50%));
 	padding:5px;
 	color:#694120;
 }
@@ -34,30 +36,100 @@ nav {
 }
 
 .button {
-	background:saturate(#EBEADC, 10%);
-	@include box-shadow(0px 8px 0px 0px darken(#EBEADC, 50%));
+	background:#96D3D4;
+	@include box-shadow(0px 8px 0px 0px darken(#96D3D4, 50%));
 	border: none;
 	color:#694120;
 	border-radius: 15px;
+	font-weight:100;
+	font-size:18px;
 	&:hover {
-		background:darken(#EBEADC, 30%);
+		background:darken(#96D3D4, 30%);
 	}
 }
 a.button {
 	text-align: center;
-	margin: 20px 16%;
-	color:#694120;
+	margin:20px auto;
+	color:#fff;
+	min-width:250px;
+	font-size:18px;
 	&.active {
 		color:#fff;
-		background:darken(#EBEADC, 50%);
-		@include box-shadow(0px 5px 0px 0px darken(#EBEADC, 50%));
+		background:darken(#96D3D4, 50%);
+		@include box-shadow(0px 5px 0px 0px darken(#96D3D4, 50%));
 	}
 }
 .action {
 	@extend .button;
 	min-width:250px;
-	color:#694120;
+	font-size:18px;
+	color:#fff;
 	margin-left:10px;
 	outline: none;
 	cursor: pointer;
+}
+
+.flavor {
+	@extend .button;
+	float:left;
+	margin:30px;
+	width:320px;
+	outline:none;
+}
+
+.Chocolate {
+	color:#fff;
+	background:#846737;
+	@include box-shadow(0px 5px 0px 0px darken(#846737, 10%));
+	&:hover {
+		color:#fff;
+		background:darken(#846737, 10%);
+	}
+}
+
+.Vanilla {
+	background:#fffbdd;
+	@include box-shadow(0px 5px 0px 0px darken(#fffbdd, 10%));
+	&:hover {
+		background:darken(#fffbdd, 10%);
+	}
+}
+
+.Rocky {
+	background: #543232;
+	@include box-shadow(0px 5px 0px 0px darken(#543232, 10%));
+	&:hover {
+		background:darken(#543232, 10%);
+	}
+	color:#fff;
+}
+
+.Mint {
+	background:#b8ffb7;
+	color:#846737;
+	@include box-shadow(0px 5px 0px 0px darken(#b8ffb7, 10%));
+	&:hover {
+		background:darken(#b8ffb7, 10%);
+	}
+}
+
+.Butterscotch {
+	background:#edcd2f;
+	@include box-shadow(0px 5px 0px 0px darken(#edcd2f, 10%));
+	&:hover {
+		background:darken(#edcd2f, 10%);
+	}
+	&:selected {
+		background:darken(#edcd2f, 10%);
+	}
+}
+
+.Cookies {
+	background:#000;
+	@include box-shadow(0px 5px 0px 0px #fff);
+	&:hover {
+		background:#000;
+		@include box-shadow(0px 5px 0px 0px darken(#fff, 10%));
+	}
+	color:#fff;
 }

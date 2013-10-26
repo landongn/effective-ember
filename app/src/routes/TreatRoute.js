@@ -7,6 +7,8 @@ App.TreatRoute = Ember.Route.extend({
 	},
 
 	renderTemplate: function () {
-
+			this.render('menu/mainMenu', {
+			outlet: 'menu'
+		});
 	}
 });
